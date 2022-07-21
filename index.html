@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Sample Project</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+    <link rel="stylesheet" href="./assets/css/list.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Signika+Negative:wght@300&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <a class="skip-to-dark" href="#switch" tabindex="1">
+        Dark Mode
+    </a>
+    <a class="skip-to-content" href="#content" tabindex="2">
+        Pular para o conteúdo
+    </a>
+    <header class="header1">
+
+        <div class="title" style="color: #ffffff;">Tecnologia Assistiva - UNINTER</div>
+        <div class="acessibility-menu">
+            <ul>
+                <li><a href="#altocontraste" id="altocontraste" accesskey="1" onclick="window.toggleContrast()"
+                        onkeydown="window.toggleContrast()" tabindex="3" style="color: #ffffff;">Alto contraste [ALT + 1]</a></li>
+            </ul>
+        </div>
+    </header>
+    <main>
+
+        <section id="content" class="dark-div">
+            <h2 tabindex="4">MODO ESCURO</h2>
+            <p style="margin-right: 10px;" tabindex="5">Este é o Dark Mode ou modo escuro, uma tecnologia muito
+                importante e muito utilizada atualmente.
+                por exemplo, ela pode ajudar pessoas que tem algum tipo de problema visual, como fotofobia, e até mesmo
+                pessoas que não tem problemas, mas que utilizam muito o computador para leitura, trabalho e afins, pois
+                ela diminui o esforço que os olhos precisam fazer para poder ler a tela e, a longo prazo, evita que
+                as pessoas desenvolvam alguma doença nos olhos.
+                Ele pode ser feito de maneira relativamente simples com CSS/Javascript.
+                Aqui está um <a href="https://www.youtube.com/watch?v=BvhYm0BOLvA&t" tabindex="6" target="_blank"
+                    rel="noreferrer noopener">video explicando</a> uma das
+                maneiras de se fazer o Dark Mode. Esta não é a unica forma de faze-lo, mas vale dar uma olhada, pois
+                desenvolvedores de qualquer nivel, serão capazes de aplica-la em seus projetos, ajudando as pessoas
+                com o modo escuro em seus sites ou aplicações web.</p>
+            <div class="h1-div">
+
+            </div>
+            <div class="toggle">
+                <h4 class="dark-tg" style="margin-top: 4px;" tabindex="7">Dark Mode</h4>
+                <input tabindex="8" id="switch" type="checkbox" name="theme">
+                <label class="label-tg" for="switch">Toggle</label>
+            </div>
+
+        </section>
+
+        <section class="contrast-div">
+            <h2 tabindex="9">ALTO CONTRASTE</h2>
+            <p tabindex="10"> A aplicação de alto contraste, é uma prática muito útil também, assim como o próprio dark
+                mode,
+                pois também facilita a leitura, dando mais foco no texto a ser lido em uma página, seu padrão, como
+                pode ser visto, utilizando a tecla 'ALT + 3', nessa página, é transformar os fundos em preto e as
+                fontes em branco, assim causando um grande contraste entre essas duas cores básicas, tornando muito mais
+                legivel a quem tem alguma dificuldade para ler em telas de qualquer dispositivo, também tornando mais
+                facil para o olho humano focar nos textos e outras coisas exibidas na tela.
+            </p>
+
+        </section>
+        <section>
+            <h2 tabindex="11">NAVEGAÇÃO SEM MOUSE OU VIA TECLADO</h2>
+            <p tabindex="12">
+                A navegação sem utilizar o mouse, é uma boa prática de acessibilidade, pois auxilia as pessoas que tem
+                algum tipo de impedimento ou baixa mobilidade, assim, a pessoa pode utilizar apenas um
+                dispositivo/preriférico
+                para navegar pelo seu website. Utilizamos alguns exemplos nesta página, como no inicio da página, um
+                link para
+                pular para o conteúdo principal, em seguida, um link para acessar o botão de dark mode, e as teclas
+                ALT + 3 para ativar o alto contraste, como mostrado no tópico anterior, também pode ser feita a
+                navegação
+                entre os tópicos da página com a tecla TAB, assim facilitando para quem utiliza leitores de tela.
+                No nosso caso, utilizamos o <code>tabindex</code> no HTML, pois de forma fácil ele ajuda a organizar
+                a ordem em que a tecla TAB navega pela página, e já aplica automáticamente a borda em volta do conteudo.
+                Existem outras maneiras de se fazer a navegação via teclado, quando necessário para sites mais complexos
+                e com mais elementos na página. Você pode acessar um post sobre o tabindex, do desenvolvedor Everson da
+                Luz,
+                clicando <a href="https://www.eversondaluz.com.br/focus-em-elementos-tabindex" tabindex="13"
+                    target="_blank" rel="noreferrer noopener">aqui</a>.
+
+            </p>
+        </section>
+    </main>
+
+    <script src="./assets/js/darkmode.js"></script>
+    <script src="./assets/js/index.js"></script>
+    <script src="./assets/js/contrast.js"></script>
+</body>
+
+</html>
