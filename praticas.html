@@ -23,15 +23,37 @@
         Pular para o conteúdo
     </a>
     <header class="header1">
+<nav>
+<div class="logo-title" style="display: flex;
+    align-items: center; color: #FFF;">
+            <img class="img-logo" src="./assets/img/accessibility.png" style="width: 40px; height: 36.84px; border-radius: 50%;">
+    <div class="menu-title" style="font-size: 20px; font-style: normal; padding-left: 18px;">
+        <h4>
+            Tecnologia Assistiva - UNINTER
+        </h4>
+    </div>
+</div>
 
-        <div class="title" style="color: #ffffff;">Tecnologia Assistiva - UNINTER</div>
-        <div class="acessibility-menu">
-            <ul>
-                <li><a href="#altocontraste" id="altocontraste" accesskey="1" onclick="window.toggleContrast()"
-                        onkeydown="window.toggleContrast()" tabindex="3" style="color: #ffffff;">Alto contraste [ALT + 1]</a></li>
-                <li><a href="./index.html" id="praticas" tabindex="3" style="color: #ffffff;">Voltar a página inicial</a></li>
-                    </ul>
-        </div>
+    <ul
+        style="display: flex; list-style: none; justify-content: center; align-items: center; height: 40px; padding: 0 17px;">
+        <li class="start-page"><a href="./index.html" id="index" tabindex="3" style="color: #ffffff; margin: 0 7px;
+    justify-content: center; text-decoration: none; font-size: 16px;">Página Inicial</a></li>
+        <li class="bar" style="margin: 0 7px;
+    justify-content: center; color: #ffffff;">│</li>
+        <li class="content-page"><a href="./praticas.html" id="praticas" tabindex="3" style="color: #ffffff; margin: 0 7px;
+    justify-content: center; text-decoration: none; font-size: 16px;">As Práticas</a></li>
+    </ul>
+
+    <div class="acessibility" style="margin-right: 245px;">
+        <ul style="text-align: center;">
+            <li style="list-style: none;"><a href="#altocontraste" id="altocontraste" accesskey="1"
+                    onclick="window.toggleContrast()" onkeydown="window.toggleContrast()" tabindex="3"
+                    style="color: #ffffff;"><img src="./assets/img/hc.png" alt="alto-contraste"
+                        style="width: 40px; height: 40px; border-radius: 50%;"></a></li>
+            <li style="list-style: none; color: #FFF;">[ALT + 1]</li>
+        </ul>
+    </div>
+</nav>
     </header>
     <main>
 
@@ -57,10 +79,11 @@
                 <input tabindex="8" id="switch" type="checkbox" name="theme">
                 <label class="label-tg" for="switch">Toggle</label>
             </div>
-            <div class="dark-code">
-                <div>Aqui está o código base utilizado no Darkmode, disponivel no video citado no texto acima.
-                    Você pode fazer as modificações de acordo com a sua necessidade!
-                </div>
+            <div>Aqui está o código base utilizado no Darkmode, disponivel no video citado no texto acima.
+                Você pode fazer as modificações de acordo com a sua necessidade!
+            </div>
+            <button class="hideButton" onclick="showHide()">Mostrar/Esconder</button>
+            <div class="dark-code" id="darkcode">
                 <pre>
                     <code>
                     const html = document.querySelector("html")
@@ -109,7 +132,8 @@
                         &lt;label class="label-tg" for="switch"&gt;Toggle&lt;/label&gt;
                     &lt;/div&gt;
                     
-                    OBS: A estilização em CSS fica a seu critério mas, também pode ser encontrada <a href="https://gist.github.com/maykbrito/f3744039fcc20db62d6cfd502aa2bc86">clicando aqui.</a>
+                    OBS: A estilização em CSS fica a seu critério mas, 
+                    também pode ser encontrada <a href="https://gist.github.com/maykbrito/f3744039fcc20db62d6cfd502aa2bc86">clicando aqui.</a>
                     </code>
                 </pre>
             </div>
@@ -127,36 +151,15 @@
                 facil para o olho humano focar nos textos e outras coisas exibidas na tela.
             </p>
 
-        </section>
-        <section>
-            <h2 tabindex="11">NAVEGAÇÃO SEM MOUSE OU VIA TECLADO</h2>
-            <p tabindex="12">
-                A navegação sem utilizar o mouse, é uma boa prática de acessibilidade, pois auxilia as pessoas que tem
-                algum tipo de impedimento ou baixa mobilidade, assim, a pessoa pode utilizar apenas um
-                dispositivo/preriférico
-                para navegar pelo seu website. Utilizamos alguns exemplos nesta página, como no inicio da página, um
-                link para
-                pular para o conteúdo principal, em seguida, um link para acessar o botão de dark mode, e as teclas
-                ALT + 3 para ativar o alto contraste, como mostrado no tópico anterior, também pode ser feita a
-                navegação
-                entre os tópicos da página com a tecla TAB, assim facilitando para quem utiliza leitores de tela.
-                No nosso caso, utilizamos o <code>tabindex</code> no HTML, pois de forma fácil ele ajuda a organizar
-                a ordem em que a tecla TAB navega pela página, e já aplica automáticamente a borda em volta do conteudo.
-                Existem outras maneiras de se fazer a navegação via teclado, quando necessário para sites mais complexos
-                e com mais elementos na página. Você pode acessar um post sobre o tabindex, do desenvolvedor Everson da
-                Luz,
-                clicando <a href="https://www.eversondaluz.com.br/focus-em-elementos-tabindex" tabindex="13"
-                    target="_blank" rel="noreferrer noopener">aqui</a>.
-
-            </p>
-            <div class="contrast-code">
+            <div>Esse é o código javascript do alto contraste, feito para fazer as teclas funcionarem,
+            no caso usamos o ALT + 1, ativando assim o alto contraste.(Lembre-se de adicionar ao seu html
+            uma descrição explicando qual o botão deve ser pressionado para ativa-lo e também, de fazer
+            a parte funcional direto no HTML.)</div>
+            <button class="hideButton" onclick="showHide2()">Mostrar/Esconder</button>
+            <div class="contrast-code" id="contrastcode">
                 <pre>
                     <code>
-                        Esse é o código javascript do alto contraste, feito para fazer as teclas funcionarem,
-                        no caso usamos o ALT + 1, ativando assim o alto contraste.(Lembre-se de adicionar ao seu html
-                        uma descrição explicando qual o botão deve ser pressionado para ativa-lo e também, de fazer
-                        a parte funcional direto no HTML.)
-
+    
                         function () {
                             var Contrast = {
                                 storage: 'contrastState',
@@ -205,9 +208,9 @@
                             this.setState(!this.currentState);
                         }
                         })();
-
-                        Ao pressionar os botões ALT + F3, em conjunto com o código JS, o CSS será ativado, aplicando
-                        os estilos abaixo que são padrões para alto contrase:
+    
+                        Ao pressionar os botões ALT + F3, em conjunto com o código JS, 
+                        o CSS será ativado, aplicando os estilos abaixo que são padrões para alto contrase:
                         
                         .contrast,
                         .contrast nav,
@@ -280,11 +283,33 @@
                         }
                     
                         Nada mais são do que estilos de alto contraste em todos os elementos do site.
-
-
+    
+    
                     </code>
                 </pre>
             </div>
+        </section>
+        <section>
+            <h2 tabindex="11">NAVEGAÇÃO SEM MOUSE OU VIA TECLADO</h2>
+            <p tabindex="12">
+                A navegação sem utilizar o mouse, é uma boa prática de acessibilidade, pois auxilia as pessoas que tem
+                algum tipo de impedimento ou baixa mobilidade, assim, a pessoa pode utilizar apenas um
+                dispositivo/preriférico
+                para navegar pelo seu website. Utilizamos alguns exemplos nesta página, como no inicio da página, um
+                link para
+                pular para o conteúdo principal, em seguida, um link para acessar o botão de dark mode, e as teclas
+                ALT + 3 para ativar o alto contraste, como mostrado no tópico anterior, também pode ser feita a
+                navegação
+                entre os tópicos da página com a tecla TAB, assim facilitando para quem utiliza leitores de tela.
+                No nosso caso, utilizamos o <code>tabindex</code> no HTML, pois de forma fácil ele ajuda a organizar
+                a ordem em que a tecla TAB navega pela página, e já aplica automáticamente a borda em volta do conteudo.
+                Existem outras maneiras de se fazer a navegação via teclado, quando necessário para sites mais complexos
+                e com mais elementos na página. Você pode acessar um post sobre o tabindex, do desenvolvedor Everson da
+                Luz,
+                clicando <a href="https://www.eversondaluz.com.br/focus-em-elementos-tabindex" tabindex="13"
+                    target="_blank" rel="noreferrer noopener">aqui</a>.
+
+            </p>
         </section>
         <section>
             <h2 tabindex="14">BOAS PRATICAS NA DESCRIÇÃO DE IMAGENS</h2>
@@ -321,6 +346,7 @@
     <script src="./assets/js/darkmode.js"></script>
     <script src="./assets/js/index.js"></script>
     <script src="./assets/js/contrast.js"></script>
+    <script src="./assets/js/show.js"></script>
 </body>
 
 </html>
