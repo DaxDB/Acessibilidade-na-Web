@@ -12,7 +12,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Signika+Negative:wght@300&display=swap" rel="stylesheet">
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@100&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -22,10 +27,10 @@
     <a class="skip-to-content" href="#content" tabindex="2">
         Pular para o conteúdo
     </a>
-    <header>
+    
         <nav>
         <div class="logo-title" style="display: flex;
-    align-items: center; color: #FFF;">
+    align-items: center; color: #FFF; margin-left: 105px;">
             <img class="img-logo" src="./assets/img/accessibility.png" style="width: 40px; height: 36.84px; border-radius: 50%;">
             <div class="menu-title" style="font-size: 20px; font-style: normal; padding-left: 18px;">
                 <h4>
@@ -34,7 +39,7 @@
             </div>
         </div>
             
-        <ul style="display: flex; list-style: none; justify-content: center; align-items: center; height: 40px; padding: 0 17px;">
+        <ul style="display: flex; list-style: none; margin-left: 45px; justify-content: center; align-items: center; height: 40px; padding: 0 17px;">
                 <li class="start-page"><a href="./index.html" id="index" tabindex="3" style="color: #ffffff; margin: 0 7px;
     justify-content: center; text-decoration: none; font-size: 16px;">Página Inicial</a></li>
                 <li class="bar" style="margin: 0 7px;
@@ -47,103 +52,98 @@
             <ul style="text-align: center;">
                     <li style="list-style: none;"><a href="#altocontraste" id="altocontraste" accesskey="1" onclick="window.toggleContrast()"
                         onkeydown="window.toggleContrast()" tabindex="3" style="color: #ffffff;"><img src="./assets/img/hc.png" alt="alto-contraste" style="width: 40px; height: 40px; border-radius: 50%;"></a></li>
-                    <li style="list-style: none; color: #FFF;">[ALT + 1]</li>
+                    <li style="font-size:14px; list-style: none; color: #FFF;">[ALT + 1]</li>
                     </ul>
             </div>
-            <div class="toggle">
-                <h4 class="dark-tg" style="margin-top: 4px;" tabindex="7">Dark Mode</h4>
+            <div class="toggle" style="margin-top: 20px;">
+                <h4 class="dark-tg" style="margin-top: 4px; color: white;" tabindex="7">Dark Mode</h4>
                 <input tabindex="8" id="switch" type="checkbox" name="theme">
                 <label class="label-tg" for="switch">Toggle</label>
             </div>
             </nav>
-    </header>
+    
     <main>
 
-        <div class="h1-main"><h2> Por que fizemos este site?</h2></div>
         <section id="content" class="dark-div">
-            <h2 tabindex="4">A importância da Acessibilidade na Web</h2>
-            <p style="margin-right: 10px;" tabindex="5">Este site foi feito por 3 alunos de Análise e Desenvolvimento
-            de sistemas, sendo um deles um deficiente visual e desenvolvedor, CID H35.5 - Doenças Hereditárias da Retina.
-            A grande importância desas práticas, diz respeito a igualdade no ambiente virtual que, atualmente é acessado
-            por uma enorme parcela da população, seja por dispositivos móveis que são maioria atualmente ou por qualquer 
-            outro meio. 
-            Segundo o Censo de 2010, no Brasil, existem mais de 45 milhões de pessoas com algum tipo de deficiência,
-            considerando que no mesmo ano da pesquisa, haviam 195,7 milhões de individuos, a quantia de PCD's era de 1/4
-            de toda a população, é um número consideravél, mas, ainda sim essa questão não é algo divulgado com a intensidade
-            necessária para trazer maior satisfação e redução da desigualdade com relação a essas pessoas no País.
-            Deveria ser diferente considerando essa parcela da população que vive com algum tipo de deficiência, principalmente
-            na internet, no ambiente digital como um todo, o que corrobora para essa afirmação são dois fatores, são 60 milhões
-            de pessoas com necessidades específicas para acessar a web atualmente, e que segundo a OMS, apenas 10% das pessoas
-            com deficiência tem acesso a tecnologia da qual necessitam, sendo assim, fica facil perceber um déficit nesta area. 
-            </p>
+            <div class="align">
+
+                <div class="h2-main">
+
+                    <h2 tabindex="4">A importância da Acessibilidade na Web</h2>
+                </div>
+                <p style="margin-right: 10px;" tabindex="5">Este site foi feito por 3 alunos de Análise e Desenvolvimento
+                    de sistemas, sendo um deles um deficiente visual e desenvolvedor, CID H35.5 - Doenças Hereditárias da Retina.
+                    A grande importância desas práticas, diz respeito a igualdade no ambiente virtual que, atualmente é acessado
+                    por uma enorme parcela da população, seja por dispositivos móveis que são maioria atualmente ou por qualquer 
+                    outro meio. 
+                    Segundo o Censo de 2010, no Brasil, existem mais de 45 milhões de pessoas com algum tipo de deficiência,
+                    considerando que no mesmo ano da pesquisa, haviam 195,7 milhões de individuos, a quantia de PCD's era de 1/4
+                    de toda a população, é um número consideravél, mas, ainda sim essa questão não é algo divulgado com a intensidade
+                    necessária para trazer maior satisfação e redução da desigualdade com relação a essas pessoas no País.
+                    Deveria ser diferente considerando essa parcela da população que vive com algum tipo de deficiência, principalmente
+                    na internet, no ambiente digital como um todo, o que corrobora para essa afirmação são dois fatores, são 60 milhões
+                    de pessoas com necessidades específicas para acessar a web atualmente, e que segundo a OMS, apenas 10% das pessoas
+                    com deficiência tem acesso a tecnologia da qual necessitam, sendo assim, fica facil perceber um déficit nesta area. 
+                </p>
+            </div>
         </section>
         <section id="content" class="dark-div">
-            <h2 tabindex="4">O papel dos Desenvolvedores na Acessibilidade</h2>
-            <p style="margin-right: 10px;" tabindex="5">O grande papel de quem desenvolve na acessibilidade, é o de implementar opções para suprir as necessidades daqueles que
-            tem alguma dificuldade,
-            pois nós que criamos sites e aplicações, somos os arquitetos do mundo digital, sendo assim, se fizessemos uma casa para
-            alguma pessoa com
-            deficiênciência nós fariamos a casa com toda acessibilidade necessária para ela. Na internet isso não é diferente,
-            apesar do seu contratante
-            não te pedir para fazer um site acessivel, acreditamos que é o seu dever, nosso dever, lembrar que no mundo existem
-            pessoas diferentes de nós
-            cada um com sua peculiaridade. Assim como nós queremos igualdade para nós mesmos, nossos entes queridos e amigos, temos
-            que pensar de forma
-            mais ampla, levando isso a todos e não só a quem nos convém. Dessa forma, mesmo que não consigamos suprir todas as
-            necessidades e acabar de vez
-            com a dificuldade de acesso para todos, estamos fazendo nossa parte em um grande mundo digital onde cada pequena ação
-            conta e muitas vezes,
-            pode acender uma pequena chama em outra pessoa para que ela pense e mude sua forma de fazer suas aplicações e websites.
-            A falta de acessibilidade não é apenas na internet, mas também na rua, porém, o lugar onde podemos fazer a diferença é
-            aqui, trazendo conforto
-            e uma sensação de que a pessoa também faz parte da nossa comunidade web, essa é a importância de nós que construimos
-            parte desse meio.
-            </p>
-        </section>
+            <div class="align">
+
+                <div class="h2-main">
+                    
+                    <h2 tabindex="4">O papel dos Desenvolvedores na Acessibilidade</h2>
+                </div>
+                <p style="margin-right: 10px;" tabindex="5">O grande papel de quem desenvolve na acessibilidade, é o de implementar opções para suprir as necessidades daqueles que
+                    tem alguma dificuldade,
+                    pois nós que criamos sites e aplicações, somos os arquitetos do mundo digital, sendo assim, se fizessemos uma casa para
+                    alguma pessoa com
+                    deficiênciência nós fariamos a casa com toda acessibilidade necessária para ela. Na internet isso não é diferente,
+                    apesar do seu contratante
+                    não te pedir para fazer um site acessivel, acreditamos que é o seu dever, nosso dever, lembrar que no mundo existem
+                    pessoas diferentes de nós
+                    cada um com sua peculiaridade. Assim como nós queremos igualdade para nós mesmos, nossos entes queridos e amigos, temos
+                    que pensar de forma
+                    mais ampla, levando isso a todos e não só a quem nos convém. Dessa forma, mesmo que não consigamos suprir todas as
+                    necessidades e acabar de vez
+                    com a dificuldade de acesso para todos, estamos fazendo nossa parte em um grande mundo digital onde cada pequena ação
+                    conta e muitas vezes,
+                    pode acender uma pequena chama em outra pessoa para que ela pense e mude sua forma de fazer suas aplicações e websites.
+                    A falta de acessibilidade não é apenas na internet, mas também na rua, porém, o lugar onde podemos fazer a diferença é
+                    aqui, trazendo conforto
+                    e uma sensação de que a pessoa também faz parte da nossa comunidade web, essa é a importância de nós que construimos
+                    parte desse meio.
+                </p>
+            </div>
+            </section>
         <section id="content" class="dark-div">
-            <h2 tabindex="4">Contexto Histórico</h2>
-            <p style="margin-right: 10px;" tabindex="5">Este site foi feito por 3 alunos de Análise e Desenvolvimento
-                de sistemas, sendo um deles um deficiente visual e desenvolvedor, CID H35.5 - Doenças Hereditárias da Retina.
-                A grande importância desas práticas, diz respeito a igualdade no ambiente virtual que, atualmente é acessado
-                por uma enorme parcela da população, seja por dispositivos móveis que são maioria atualmente ou por qualquer
-                outro meio.
-                Segundo o Censo de 2010, no Brasil, existem mais de 45 milhões de pessoas com algum tipo de deficiência,
-                considerando que no mesmo ano da pesquisa, haviam 195,7 milhões de individuos, a quantia de PCD's era de 1/4
-                de toda a população, é um número consideravél, mas, ainda sim essa questão não é algo divulgado com a
-                intensidade
-                necessária para trazer maior satisfação e redução da desigualdade com relação a essas pessoas no País.
-                Deveria ser diferente considerando essa parcela da população que vive com algum tipo de deficiência,
-                principalmente
-                na internet, no ambiente digital como um todo, o que corrobora para essa afirmação são dois fatores, são 60
-                milhões
-                de pessoas com necessidades específicas para acessar a web atualmente, e que segundo a OMS, apenas 10% das
-                pessoas
-                com deficiência tem acesso a tecnologia da qual necessitam, sendo assim, fica facil perceber um déficit nesta
-                area.
-            </p>
-        </section>
-        <section id="content" class="dark-div">
-            <h2 tabindex="4">Considerações Finais</h2>
-            <p style="margin-right: 10px;" tabindex="5">Este site foi feito por 3 alunos de Análise e Desenvolvimento
-                de sistemas, sendo um deles um deficiente visual e desenvolvedor, CID H35.5 - Doenças Hereditárias da Retina.
-                A grande importância desas práticas, diz respeito a igualdade no ambiente virtual que, atualmente é acessado
-                por uma enorme parcela da população, seja por dispositivos móveis que são maioria atualmente ou por qualquer
-                outro meio.
-                Segundo o Censo de 2010, no Brasil, existem mais de 45 milhões de pessoas com algum tipo de deficiência,
-                considerando que no mesmo ano da pesquisa, haviam 195,7 milhões de individuos, a quantia de PCD's era de 1/4
-                de toda a população, é um número consideravél, mas, ainda sim essa questão não é algo divulgado com a
-                intensidade
-                necessária para trazer maior satisfação e redução da desigualdade com relação a essas pessoas no País.
-                Deveria ser diferente considerando essa parcela da população que vive com algum tipo de deficiência,
-                principalmente
-                na internet, no ambiente digital como um todo, o que corrobora para essa afirmação são dois fatores, são 60
-                milhões
-                de pessoas com necessidades específicas para acessar a web atualmente, e que segundo a OMS, apenas 10% das
-                pessoas
-                com deficiência tem acesso a tecnologia da qual necessitam, sendo assim, fica facil perceber um déficit nesta
-                area.
-            </p>
-        </section>
+            <div class="align">
+                <div class="h2-main">
+
+                    <h2 tabindex="4">Contexto Histórico</h2>
+                </div>
+                <p style="margin-right: 10px;" tabindex="5">Este site foi feito por 3 alunos de Análise e Desenvolvimento
+                    de sistemas, sendo um deles um deficiente visual e desenvolvedor, CID H35.5 - Doenças Hereditárias da Retina.
+                    A grande importância desas práticas, diz respeito a igualdade no ambiente virtual que, atualmente é acessado
+                    por uma enorme parcela da população, seja por dispositivos móveis que são maioria atualmente ou por qualquer
+                    outro meio.
+                    Segundo o Censo de 2010, no Brasil, existem mais de 45 milhões de pessoas com algum tipo de deficiência,
+                    considerando que no mesmo ano da pesquisa, haviam 195,7 milhões de individuos, a quantia de PCD's era de 1/4
+                    de toda a população, é um número consideravél, mas, ainda sim essa questão não é algo divulgado com a
+                    intensidade
+                    necessária para trazer maior satisfação e redução da desigualdade com relação a essas pessoas no País.
+                    Deveria ser diferente considerando essa parcela da população que vive com algum tipo de deficiência,
+                    principalmente
+                    na internet, no ambiente digital como um todo, o que corrobora para essa afirmação são dois fatores, são 60
+                    milhões
+                    de pessoas com necessidades específicas para acessar a web atualmente, e que segundo a OMS, apenas 10% das
+                    pessoas
+                    com deficiência tem acesso a tecnologia da qual necessitam, sendo assim, fica facil perceber um déficit nesta
+                    area.
+                </p>
+            </div>
+            </section>
+       
 
         
     </main>

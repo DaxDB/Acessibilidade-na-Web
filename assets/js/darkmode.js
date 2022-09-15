@@ -14,6 +14,8 @@ const initialColors = {
     colorHeadings: getStyle(html, "--color-headings"),
     focus: getStyle(html, "--focus"),
     theme: getStyle(html, "--bg-theme"),
+    border: getStyle(html, "--border"),
+   
 
 }
 
@@ -23,7 +25,9 @@ const darkMode = {
     linkColor: "#b3b3b3",
     colorHeadings: "#ffffff",
     focus:"#FFFFFF",
-    theme: "#1F2022"
+    theme: "#191970",
+    border: "#000000"
+
     
 }
 

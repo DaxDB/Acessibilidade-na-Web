@@ -12,7 +12,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Signika+Negative:wght@300&display=swap" rel="stylesheet">
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@100&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -25,7 +30,7 @@
     <header class="header1">
 <nav>
 <div class="logo-title" style="display: flex;
-    align-items: center; color: #FFF;">
+    align-items: center; color: #FFF; margin-left: 90px;">
             <img class="img-logo" src="./assets/img/accessibility.png" style="width: 40px; height: 36.84px; border-radius: 50%;">
     <div class="menu-title" style="font-size: 20px; font-style: normal; padding-left: 18px;">
         <h4>
@@ -50,116 +55,194 @@
                     onclick="window.toggleContrast()" onkeydown="window.toggleContrast()" tabindex="3"
                     style="color: #ffffff;"><img src="./assets/img/hc.png" alt="alto-contraste"
                         style="width: 40px; height: 40px; border-radius: 50%;"></a></li>
-            <li style="list-style: none; color: #FFF;">[ALT + 1]</li>
+            <li style="list-style: none; color: #FFF; font-size:14px;">[ALT + 1]</li>
         </ul>
     </div>
 </nav>
     </header>
     <main>
+        <section id="content" class="semantic">
+            <div class="align">
+                <div class="h2-main">
+                    <h2>HTML SEMÂNTICO, RÓTULOS E DADOS DE FORMA ACESSÍVEL</h2>
+                </div>
+                <p>
+                    O HTML semântico nada mais é do que, escrever o seu código de uma forma que seja de facil entendimento
+                    para o computador, ou seja, escrever o HTML com tags que façam sentido, de acordo com o conteúdo.
+                    Isso é importante para acessibilidade pois, ajuda as ferramentas como o leitor de tela, compreender melhor
+                    as seções e tudo que está disposto em seu site.<br><br>
+                    <strong>"Semântica é o estudo do significado e interpretação de palavras. Aplicando isso ao HTML, significa a melhor compreensão
+                    do HTML para o computador."</strong><br><br>
+                    Anteriormente do atual HTML5, usavamos apenas "divs" para separar o conteudo, sendo assim o computador
+                    não podia compreender o seu site pois não havia uma separação que fazia sentido para ele, dificultando a criação e
+                    usabilidade de leitores de tela.
 
+                    
+                </p>
+                <p class="extra-content"> Temos bons exemplos de tags html semãnticas, algumas delas são: header, aside, section, article, nav, main, footer, entre outras.
+                    <br><br>
+                Aqui vai uma breve explicação das principais tags citada acima, também utilizando uma lista ordenada que ajuda ao leitor de tela compreender a ordem e o tipo de conteúdo.
+                <br><br>
+                <ol>
+                    <li>Header: indica o cabeçalho da página.</li>
+                    <li>Section: Indica seções de conteúdo do seu site.</li>
+                    <li>Nav: Indica um agrupamento de links, uma barra de navegação entre as páginas e/ou o conteúdo de sua página.</li>
+                    <li>Main: Indica o conteúdo principal da sua página, só é recomendado um por página.</li>
+                    <li>Figure: Indica que o conteúdo é uma figura, e ainda é possivel adicioanru um 'figcaption', uma legenda para a mesma.</li>
+                    <li>Footer: Indica que o conteúdo é um rodapé, pode ser utilizado tanto na página quanto no rodapé de artigos.</li>
+                </ol>
+                </p>
+                <h3 class="h2-main">Rótulos de Texto com significado</h3>
+                <p>
+                    Os rótulos de texto tornam mais fácil entender para onde e para que serve o item, tais como botões e links.
+                    Devem ser feitos de maneira que o leitor entenda onde vai parar se clicar naquele local, um exemplo de um rótulo ruim 
+                    são links com "clique aqui", isso pode parecer algo comum mas se deseja acessibilidade, precisa entender que, os ususarios
+                    de leitores podem usar atalhos para exibir ou ouvir listas de botões e controle de formulário, dificultando uma identificação
+                    adequada. Você deve se certificar de que os rótulos fazem sentido quando lidos individualmente e no contexto do paragráfo.
+                </p>
+                <p>
+                    Aqui está um bom exemplo de rótulo em um link: 
+                    <br>
+                    "Acessibilidade na web é de extrema importância para nosso mundo. <a href="https://mwpt.com.br">veja mais sobre acessibilidade web.</a>"
+                    <br>
+                    Em seguida um exemplo do que não deve ser feito:
+                    <br>
+                    "Acessibilidade na web é de extrema importância para nosso mundo. <a href="https://mwpt.com.br">clique aqui</a> para saber mais."
+                </p>
+                <p>
+                    Os rótulos de formulário também devem ser escritos de uma maneira compreensivel para os leitores, sendo assim
+                    uma boa maneira de escreve-los serie:
+                    <br><br>
+                    &lt;div&gt;<br>
+                    &lt;label for="email"&gt;Digite o seu e-mail aqui:&lt;/label&gt;
+                    <br>
+                    &lt;input type="text" id="email" name="email"&gt;
+                    <br>
+                    &lt;/div&gt;
+                    <br><br>
+                    Dessa forma o leitor entenderá que ali é um campo a ser preenchido com o e-mail.
+                    <br><br>
+                    E aqui seria um exemplo ruim a ser usado em seu código:
+                    <br><br>
+                    Digite o seu e-mail aqui: &lt;input type="text" id="email" name="email"&gt;
+
+                </p>
+
+            </div>
+        </section>
         <section id="content" class="dark-div">
-            <h2 tabindex="4">MODO ESCURO</h2>
-            <p style="margin-right: 10px;" tabindex="5">Este é o Dark Mode ou modo escuro, uma tecnologia muito
-                importante e muito utilizada atualmente.
-                por exemplo, ela pode ajudar pessoas que tem algum tipo de problema visual, como fotofobia, e até mesmo
-                pessoas que não tem problemas, mas que utilizam muito o computador para leitura, trabalho e afins, pois
-                ela diminui o esforço que os olhos precisam fazer para poder ler a tela e, a longo prazo, evita que
-                as pessoas desenvolvam alguma doença nos olhos.
-                Ele pode ser feito de maneira relativamente simples com CSS/Javascript.
-                Aqui está um <a href="https://www.youtube.com/watch?v=BvhYm0BOLvA&t" tabindex="6" target="_blank"
-                    rel="noreferrer noopener">video explicando</a> uma das
-                maneiras de se fazer o Dark Mode. Esta não é a unica forma de faze-lo, mas vale dar uma olhada, pois
-                desenvolvedores de qualquer nivel, serão capazes de aplica-la em seus projetos, ajudando as pessoas
-                com o modo escuro em seus sites ou aplicações web.</p>
-            <div class="h1-div">
+            <div class="align">
+                <div class="h2-main">
 
-            </div>
-            <div class="toggle">
-                <h4 class="dark-tg" style="margin-top: 4px;" tabindex="7">Dark Mode</h4>
-                <input tabindex="8" id="switch" type="checkbox" name="theme">
-                <label class="label-tg" for="switch">Toggle</label>
-            </div>
-            <div>Aqui está o código base utilizado no Darkmode, disponivel no video citado no texto acima.
-                Você pode fazer as modificações de acordo com a sua necessidade!
-            </div>
-            <button class="hideButton" onclick="showHide()">Mostrar/Esconder</button>
-            <div class="dark-code" id="darkcode">
-                <pre>
+                    <h2 tabindex="4">MODO ESCURO</h2>
+                </div>
+                <p tabindex="5">Este é o Dark Mode ou modo escuro, uma tecnologia muito
+                    importante e muito utilizada atualmente.
+                    por exemplo, ela pode ajudar pessoas que tem algum tipo de problema visual, como fotofobia, e até mesmo
+                    pessoas que não tem problemas, mas que utilizam muito o computador para leitura, trabalho e afins, pois
+                    ela diminui o esforço que os olhos precisam fazer para poder ler a tela e, a longo prazo, evita que
+                    as pessoas desenvolvam alguma doença nos olhos.
+                    Ele pode ser feito de maneira relativamente simples com CSS/Javascript.
+                    Aqui está um <a href="https://www.youtube.com/watch?v=BvhYm0BOLvA&t" tabindex="6" target="_blank"
+                    rel="noreferrer noopener">video explicando uma das
+                    maneiras de se fazer o Dark Mode.</a> Esta não é a unica forma de faze-lo, mas vale dar uma olhada, pois
+                    desenvolvedores de qualquer nivel, serão capazes de aplica-la em seus projetos, ajudando as pessoas
+                    com o modo escuro em seus sites ou aplicações web.</p>
+                    
+                    <div class="h2-main">
+
+                        <div class="toggle">
+                            <h4 class="dark-tg" style="margin-top: 4px;" tabindex="7">Dark Mode</h4>
+                            <input tabindex="8" id="switch" type="checkbox" name="theme">
+                            <label class="label-tg" for="switch">Toggle</label>
+                        </div>
+                    </div>
+                        <p style="text-align: center;">Aqui está o código base utilizado, disponivel no video citado no texto acima.
+                        Você pode fazer as modificações de acordo com a sua necessidade!
+                    </p>
+                    <button class="hideButton" onclick="showHide()">Mostrar/Esconder</button>
+                    <div class="dark-code" id="darkcode">
+                        <pre>
                     <code>
-                    const html = document.querySelector("html")
-                    const checkbox = document.querySelector("input[name=theme]")
-                    
-                    const getStyle = (element, style) =>
+                        const html = document.querySelector("html")
+                        const checkbox = document.querySelector("input[name=theme]")
+                        
+                        const getStyle = (element, style) =>
                         window
-                            .getComputedStyle(element)
-                            .getPropertyValue(style)
-                    
-                    
-                    const initialColors = {
-                        bg: getStyle(html, "--bg"),
-                        bgPanel: getStyle(html, "--bg-panel"),
-                        colorHeadings: getStyle(html, "--color-headings"),
-                        colorText: getStyle(html, "--color-text"),
-                    }
-                    
-                    const darkMode = {
-                        bg: "#333333",
-                        bgPanel: "#434343",
-                        colorHeadings: "#3664FF",
+                        .getComputedStyle(element)
+                        .getPropertyValue(style)
+                        
+                        
+                        const initialColors = {
+                            bg: getStyle(html, "--bg"),
+                            bgPanel: getStyle(html, "--bg-panel"),
+                            colorHeadings: getStyle(html, "--color-headings"),
+                            colorText: getStyle(html, "--color-text"),
+                        }
+                        
+                        const darkMode = {
+                            bg: "#333333",
+                            bgPanel: "#434343",
+                            colorHeadings: "#3664FF",
                         colorText: "#B5B5B5"
                     }
                     
                     const transformKey = key =>
-                        "--" + key.replace(/([A-Z])/, "-$1").toLowerCase()
+                    "--" + key.replace(/([A-Z])/, "-$1").toLowerCase()
                     
                     
                     const changeColors = (colors) => {
                         Object.keys(colors).map(key =>
-                            html.style.setProperty(transformKey(key), colors[key])
-                    )
+                        html.style.setProperty(transformKey(key), colors[key])
+                        )
                     }
                     
                     
                     checkbox.addEventListener("change", ({target}) => {
                         target.checked ? changeColors(darkMode) : changeColors(initialColors)
                     })
-
+                    
                     Aqui está código HTML para o botão de Dark Mode:
                     
                     &lt;div class="toggle"&gt;
-                        &lt;h4 class="dark-tg" style="margin-top: 4px;" tabindex="7"&gt;Dark Mode&lt;/h4&gt;
-                        &lt;input tabindex="8" id="switch" type="checkbox" name="theme"&gt;
-                        &lt;label class="label-tg" for="switch"&gt;Toggle&lt;/label&gt;
+                    &lt;h4 class="dark-tg" style="margin-top: 4px;" tabindex="7"&gt;Dark Mode&lt;/h4&gt;
+                    &lt;input tabindex="8" id="switch" type="checkbox" name="theme"&gt;
+                    &lt;label class="label-tg" for="switch"&gt;Toggle&lt;/label&gt;
                     &lt;/div&gt;
                     
                     OBS: A estilização em CSS fica a seu critério mas, 
                     também pode ser encontrada <a href="https://gist.github.com/maykbrito/f3744039fcc20db62d6cfd502aa2bc86">clicando aqui.</a>
-                    </code>
-                </pre>
-            </div>
-
-        </section>
+                </code>
+            </pre>
+        </div>
+        
+    </div>
+    </section>
 
         <section class="contrast-div">
-            <h2 tabindex="9">ALTO CONTRASTE</h2>
-            <p tabindex="10"> A aplicação de alto contraste, é uma prática muito útil também, assim como o próprio dark
-                mode,
-                pois também facilita a leitura, dando mais foco no texto a ser lido em uma página, seu padrão, como
-                pode ser visto, utilizando a tecla 'ALT + 3', nessa página, é transformar os fundos em preto e as
+            <div class="align">
+                <div class="h2-main">
+
+                    <h2 tabindex="9">ALTO CONTRASTE</h2>
+                </div>
+                <p tabindex="10"> A aplicação de alto contraste, é uma prática muito útil também, assim como o próprio dark
+                    mode,
+                    pois também facilita a leitura, dando mais foco no texto a ser lido em uma página, seu padrão, como
+                    pode ser visto, utilizando a tecla 'ALT + 3', nessa página, é transformar os fundos em preto e as
                 fontes em branco, assim causando um grande contraste entre essas duas cores básicas, tornando muito mais
                 legivel a quem tem alguma dificuldade para ler em telas de qualquer dispositivo, também tornando mais
                 facil para o olho humano focar nos textos e outras coisas exibidas na tela.
             </p>
-
-            <div>Esse é o código javascript do alto contraste, feito para fazer as teclas funcionarem,
+            
+            <p style="text-align: center;">Esse é o código javascript do alto contraste, feito para fazer as teclas funcionarem,
             no caso usamos o ALT + 1, ativando assim o alto contraste.(Lembre-se de adicionar ao seu html
             uma descrição explicando qual o botão deve ser pressionado para ativa-lo e também, de fazer
-            a parte funcional direto no HTML.)</div>
-            <button class="hideButton" onclick="showHide2()">Mostrar/Esconder</button>
+            a parte funcional direto no HTML.)</p>
+            <button type="button" class="hideButton" onclick="showHide2()">Mostrar/Esconder</button>
             <div class="contrast-code" id="contrastcode">
                 <pre>
                     <code>
-    
+                        
                         function () {
                             var Contrast = {
                                 storage: 'contrastState',
@@ -170,17 +253,17 @@
                                 setState: setContrastState,
                                 toogle: toogleContrast,
                                 updateView: updateViewContrast
-                        };
-                        
-                        window.toggleContrast = function () { Contrast.toogle(); };
-                        
-                        Contrast.check();
-                        
-                        function checkContrast() {
-                            this.updateView();
-                        }
-                        
-                        function getContrastState() {
+                            };
+                            
+                            window.toggleContrast = function () { Contrast.toogle(); };
+                            
+                            Contrast.check();
+                            
+                            function checkContrast() {
+                                this.updateView();
+                            }
+                            
+                            function getContrastState() {
                             return localStorage.getItem(this.storage) === 'true';
                         }
                         
@@ -192,72 +275,72 @@
                         
                         function updateViewContrast() {
                             var body = document.body;
-                        
+                            
                             if (!body) return;
-                        
+                            
                             if (this.currentState === null)
-                                this.currentState = this.getState();
-                        
+                            this.currentState = this.getState();
+                            
                             if (this.currentState)
-                                body.classList.add(this.cssClass);
+                            body.classList.add(this.cssClass);
                             else
-                                body.classList.remove(this.cssClass);
+                            body.classList.remove(this.cssClass);
                         }
                         
                         function toogleContrast() {
                             this.setState(!this.currentState);
                         }
-                        })();
-    
-                        Ao pressionar os botões ALT + F3, em conjunto com o código JS, 
-                        o CSS será ativado, aplicando os estilos abaixo que são padrões para alto contrase:
-                        
-                        .contrast,
-                        .contrast nav,
-                        .contrast div,
-                        .contrast li,
-                        .contrast ol,
-                        .contrast header,
-                        .contrast footer,
-                        .contrast section,
-                        .contrast main,
-                        .contrast aside,
-                        .contrast article {
-                            background: black !important;
-                            color: white !important;
-                        }
-                        .contrast h1,
-                        .contrast h2,
-                        .contrast h3,
-                        .contrast h4,
-                        .contrast h5,
-                        .contrast h6,
-                        .contrast p,
-                        .contrast label,
-                        .contrast strong,
-                        .contrast em,
-                        .contrast cite,
-                        .contrast q,
-                        .contrast i,
-                        .contrast b,
-                        .contrast u,
-                        .contrast span {
-                            color: white !important;
-                        }
-                        .contrast a {
-                            color: yellow !important;
-                        }
-                        
-                        .contrast button,
-                        .contrast input[type=button],
-                        .contrast input[type=reset],
-                        .contrast input[type=submit] {
-                            background: black !important;
-                            color: yellow !important;
-                            border: none !important;
-                        }
-                        
-                        .contrast img.on-contrast-force-gray {
+                    })();
+                    
+                    Ao pressionar os botões ALT + F3, em conjunto com o código JS, 
+                    o CSS será ativado, aplicando os estilos abaixo que são padrões para alto contrase:
+                    
+                    .contrast,
+                    .contrast nav,
+                    .contrast div,
+                    .contrast li,
+                    .contrast ol,
+                    .contrast header,
+                    .contrast footer,
+                    .contrast section,
+                    .contrast main,
+                    .contrast aside,
+                    .contrast article {
+                        background: black !important;
+                        color: white !important;
+                    }
+                    .contrast h1,
+                    .contrast h2,
+                    .contrast h3,
+                    .contrast h4,
+                    .contrast h5,
+                    .contrast h6,
+                    .contrast p,
+                    .contrast label,
+                    .contrast strong,
+                    .contrast em,
+                    .contrast cite,
+                    .contrast q,
+                    .contrast i,
+                    .contrast b,
+                    .contrast u,
+                    .contrast span {
+                        color: white !important;
+                    }
+                    .contrast a {
+                        color: yellow !important;
+                    }
+                    
+                    .contrast button,
+                    .contrast input[type=button],
+                    .contrast input[type=reset],
+                    .contrast input[type=submit] {
+                        background: black !important;
+                        color: yellow !important;
+                        border: none !important;
+                    }
+                    
+                    .contrast img.on-contrast-force-gray {
                             filter: grayscale(100%) contrast(120%);
                         }
                         
@@ -281,72 +364,125 @@
                             border: 1px solid white !important;
                             color: white !important;
                         }
-                    
+                        
                         Nada mais são do que estilos de alto contraste em todos os elementos do site.
     
     
                     </code>
                 </pre>
             </div>
+        </div>
         </section>
         <section>
-            <h2 tabindex="11">NAVEGAÇÃO SEM MOUSE OU VIA TECLADO</h2>
-            <p tabindex="12">
-                A navegação sem utilizar o mouse, é uma boa prática de acessibilidade, pois auxilia as pessoas que tem
-                algum tipo de impedimento ou baixa mobilidade, assim, a pessoa pode utilizar apenas um
-                dispositivo/preriférico
-                para navegar pelo seu website. Utilizamos alguns exemplos nesta página, como no inicio da página, um
-                link para
-                pular para o conteúdo principal, em seguida, um link para acessar o botão de dark mode, e as teclas
-                ALT + 3 para ativar o alto contraste, como mostrado no tópico anterior, também pode ser feita a
-                navegação
-                entre os tópicos da página com a tecla TAB, assim facilitando para quem utiliza leitores de tela.
-                No nosso caso, utilizamos o <code>tabindex</code> no HTML, pois de forma fácil ele ajuda a organizar
-                a ordem em que a tecla TAB navega pela página, e já aplica automáticamente a borda em volta do conteudo.
-                Existem outras maneiras de se fazer a navegação via teclado, quando necessário para sites mais complexos
-                e com mais elementos na página. Você pode acessar um post sobre o tabindex, do desenvolvedor Everson da
-                Luz,
-                clicando <a href="https://www.eversondaluz.com.br/focus-em-elementos-tabindex" tabindex="13"
+            <div class="align">
+                <div class="h2-main">
+
+                    <h2 tabindex="11">NAVEGAÇÃO SEM MOUSE OU VIA TECLADO</h2>
+                </div>
+                <p tabindex="12">
+                    A navegação sem utilizar o mouse, é uma boa prática de acessibilidade, pois auxilia as pessoas que tem
+                    algum tipo de impedimento ou baixa mobilidade, assim, a pessoa pode utilizar apenas um
+                    dispositivo/preriférico
+                    para navegar pelo seu website. Utilizamos alguns exemplos nesta página, como no inicio da página, um
+                    link para
+                    pular para o conteúdo principal, em seguida, um link para acessar o botão de dark mode, e as teclas
+                    ALT + 3 para ativar o alto contraste, como mostrado no tópico anterior, também pode ser feita a
+                    navegação
+                    entre os tópicos da página com a tecla TAB, assim facilitando para quem utiliza leitores de tela.
+                    No nosso caso, utilizamos o <code>tabindex</code> no HTML, pois de forma fácil ele ajuda a organizar
+                    a ordem em que a tecla TAB navega pela página, e já aplica automáticamente a borda em volta do conteudo.
+                    Existem outras maneiras de se fazer a navegação via teclado, quando necessário para sites mais complexos
+                    e com mais elementos na página. Você pode acessar um post sobre o tabindex, do desenvolvedor Everson da
+                    Luz,
+                    clicando <a href="https://www.eversondaluz.com.br/focus-em-elementos-tabindex" tabindex="13"
                     target="_blank" rel="noreferrer noopener">aqui</a>.
+                    
+                </p>
+            </div>
+            </section>
+            <section>
+                <div class="align">
+                    <div class="h2-main">
 
-            </p>
-        </section>
-        <section>
-            <h2 tabindex="14">BOAS PRATICAS NA DESCRIÇÃO DE IMAGENS</h2>
-            <p tabindex="15">
-                O texto alternativo deve corresponder à imagem e destacar de forma clara, objetiva e concisa seus pontos
-                principais. Uma boa ideia ao criar a descrição é se perguntar "Se eu não puder usar essa imagem aqui, o que eu
-                escrever no lugar?,
-                porque dessa forma existe a possibilidade de que as opções de texto concordam com o que a imagem realmente
-                transmite.As descrições das imagens podem ser notificadas no próprio texto, ou através de um atributo específico
-                (também conhecido como ALT) do elemento img em HTML. As descrições fornecidas por meio dessa propriedade não são
-                exibidas visualmente e so sera reconhecida por seus leitores quando o usuario navegar pelo teclado ou se ouver a
-                falha no carregamento da imagem, dessa forma ususarios com eficiência visual podem saber qual é o conteúdo da
-                imagem através do texto descritivo.
-            </p>
-        
-            <!--imagem com descrição  -->
-            <img tabindex="16" src="./assets/img/altimg.jpg" alt="Garoto lendo um livro em ibrae" />
-        
-            <p tabindex="17">
-                logo abaixo vemos um exemplo da mesma imagem porem essa não carregou ou teve algum problema na hora de
-                renderizar, a imagem não aparece mas a descrição dela sim facilitando o uso aplicativos e software de leitura de
-                imagens como o NVDA (NonVisual Desktop Access) que e uma platafroma de leitura com codigo aberto voltado para
-                deficientes visuais.
-            </p>
-        
-        
-            <!--caso a imagem não abra a descriçãocontinua como mostra essa imagem-->
-            <img tabindex="18" src="./602ecebecdda3-768x51.jpg" title="Garoto lendo em Braile" alt="Garoto lendo um livro em ibrae" />
-            <p tabindex="19" id="Garoto lendo um livro em ibrae"></p>
-        
-        </section>
-    </main>
+                        <h2 tabindex="14">BOAS PRATICAS NA DESCRIÇÃO DE CONTEÚDOS</h2>
+                    </div>
+                    <p tabindex="15">
+                        O conteútdo em texto de um site, é inerentemente acessível porém, não devemos esquecer
+                        da acessibilidade em conteúdos multimídia como videos e imagens. Obviamente alguns não conseguem
+                        ver o conteúdo e outros não conseguem ouvir. Sendo assim, devemos aplicar regras a esse tipo de conteúdo
+                        para auxiliar na compreensão de quem necessita.
+                    </p>
+                    <p>
+                        Tratando-se de imagens, se você utilizar apenas o nome do arquivo em sua composição como:
+                        <br><br>
+                        &lt;img src="pokemon.png"&gt;
+                        <br><br>
+                        Ela não indicará nada além de nome do arquivo ao leitor de tela, isso torna dificil a compreensão
+                        pois apenas indica que é um pokemon no exemplo mas, não diz qual pokemon seria e suas caracteristícas.
+                        <br><br>
+                        &lt;img src="pokemon.png"
+                            alt="Um pokemon chamado Mewtwo, um lendário pokemon, com aparência de felino bípede branco, alto e esguio, possui
+                            uma cauda e estômago roxos com uma espécie de segundo ducto cutâneo ligando a nuca para suas costas, dobrando o pescoço.
+                            Sua aparência é ligada a mistura de um gato, um esquilo e um canguru. Ele tem as cores cinza e roxo." title="Pokemon Lendário MewTwo" &gt;
+                            <br><br>
+                            Já no exemplo acima, a descrição completa da imagem será exibita pelo texto alt e uma mais breve pelo atributo title.    
+                        
+                        </p>
+                        <p style="text-align: center;">
+                            Veja na prática a imagem com os atributos.
+                            <br><br>
+                            Title:
+                            <br><br>
+                            <img src="pokemon.png" alt="Um pokemon chamado Mewtwo, um lendário pokemon, com aparência de felino bípede branco, alto e esguio, possui
+                            uma cauda e estômago roxos com uma espécie de segundo ducto cutâneo ligando a nuca para suas costas, dobrando o pescoço.
+                            Sua aparência é ligada a mistura de um gato, um esquilo e um canguru. Ele tem as cores cinza e roxo." title="Pokemon Lendário MewTwo">
+                            <br><br>
+                            Texto Alternativo:
+                            <br><br>
+                            <img src="$.png"
+                                alt="Um pokemon chamado Mewtwo, um lendário pokemon, com aparência de felino bípede branco, alto e esguio, possui
+                                                        uma cauda e estômago roxos com uma espécie de segundo ducto cutâneo ligando a nuca para suas costas, dobrando o pescoço.
+                                                        Sua aparência é ligada a mistura de um gato, um esquilo e um canguru. Ele tem as cores cinza e roxo."
+                                title="PokemonLendário MewTwo">
+                        
+                        </p>
+            </div>
+            </section>
+            <section>
+                <div class="h2-main">
+                    <h2>Leitor em Libras em seu site de forma simples</h2>
+                </div>
+                <div class="align">
+                    <p>
+                        O site do governo disponibiliza de forma simples e gratuita um código para um leitor em Libras para seu site.
+                        É algo muito simples de se aplicar, não atrapalha a disposição de seu site e tudo que é necessário é colocar algumas linhas
+                        de código no final do seu body, após isso, o leitor ficara ao lado direito de seu site, bastando clicar, assim que ele
+                        for executado o usuário poderá clicar nos textos e até mesmo passar o mouse para ver titulos de imagens com esse leitor.
 
-    <script src="./assets/js/darkmode.js"></script>
+                        Aqui está o <a href="#">link para o site com o código a ser aplicado.</a>
+                    </p>
+                    <p>
+                        
+                    </p>
+                </div>
+            </section>
+        </main>
+        
+        <script src="./assets/js/darkmode.js"></script>
     <script src="./assets/js/index.js"></script>
     <script src="./assets/js/contrast.js"></script>
     <script src="./assets/js/show.js"></script>
+
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
 </body>
 
 </html>
