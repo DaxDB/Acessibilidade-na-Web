@@ -29,36 +29,34 @@
     </a>
     
         <nav>
-        <div class="logo-title" style="display: flex;
-    align-items: center; color: #FFF; margin-left: 105px;">
-            <img class="img-logo" src="./assets/img/accessibility.png" style="width: 40px; height: 36.84px; border-radius: 50%;">
-            <div class="menu-title" style="font-size: 20px; font-style: normal; padding-left: 18px;">
+        <div class="logo-title">
+            <img class="img-logo" src="./assets/img/accessibility.png" style="width: 40px; height: 36.84px">
+            <div class="menu-title" style="font-size: 20px; font-style: normal;">
                 <h4>
                     Tecnologia Assistiva - UNINTER
                 </h4>
             </div>
         </div>
             
-        <ul style="display: flex; list-style: none; margin-left: 45px; justify-content: center; align-items: center; height: 40px; padding: 0 17px;">
-                <li class="start-page"><a href="./index.html" id="index" tabindex="3" style="color: #ffffff; margin: 0 7px;
-    justify-content: center; text-decoration: none; font-size: 16px;">Página Inicial</a></li>
-                <li class="bar" style="margin: 0 7px;
-    justify-content: center; color: #ffffff;">│</li>
-                <li class="content-page"><a href="./praticas.html" id="praticas" tabindex="3" style="color: #ffffff; margin: 0 7px;
-    justify-content: center; text-decoration: none; font-size: 16px;">As Práticas</a></li>
+        <ul>
+                <li class="start-page"><a href="./index.html" id="index" tabindex="3" ">Página Inicial</a></li>
+                <li class="bar">│</li>
+                <li class="content-page"><a href="./praticas.html" id="praticas" tabindex="3">As Práticas</a></li>
             </ul>
         
          <div class="acessibility">
-            <ul style="text-align: center;">
-                    <li style="list-style: none;"><a href="#altocontraste" id="altocontraste" accesskey="1" onclick="window.toggleContrast()"
-                        onkeydown="window.toggleContrast()" tabindex="3" style="color: #ffffff;"><img src="./assets/img/hc.png" alt="alto-contraste" style="width: 40px; height: 40px; border-radius: 50%;"></a></li>
-                    <li style="font-size:14px; list-style: none; color: #FFF;">[ALT + 1]</li>
-                    </ul>
-            </div>
-            <div class="toggle" style="margin-top: 20px;">
-                <h4 class="dark-tg" style="margin-top: 4px; color: white;" tabindex="7">Dark Mode</h4>
-                <input tabindex="8" id="switch" type="checkbox" name="theme">
-                <label class="label-tg" for="switch">Toggle</label>
+           
+                    <div class="high"> 
+                    <a href="#altocontraste" id="altocontraste" accesskey="1" onclick="window.toggleContrast()"
+                        onkeydown="window.toggleContrast()" tabindex="3"><img src="./assets/img/hc.png" alt="alto-contraste" style="width: 40px; height: 40px; border-radius: 50%;"></a>
+                    [ALT + 1]
+                    </div>
+                    
+                    <div class="toggle dark-menu" style="margin-top: 20px;">
+                        <h4 class="dark-tg" style="margin-top: 4px; color: white;" tabindex="7">Dark Mode</h4>
+                        <input tabindex="8" id="switch" type="checkbox" name="theme">
+                        <label class="label-tg" for="switch">Toggle</label>
+                    </div>
             </div>
             </nav>
     
@@ -71,19 +69,17 @@
 
                     <h2 tabindex="4">A importância da Acessibilidade na Web</h2>
                 </div>
-                <p style="margin-right: 10px;" tabindex="5">Este site foi feito por 3 alunos de Análise e Desenvolvimento
-                    de sistemas, sendo um deles um deficiente visual e desenvolvedor, CID H35.5 - Doenças Hereditárias da Retina.
-                    A grande importância desas práticas, diz respeito a igualdade no ambiente virtual que, atualmente é acessado
-                    por uma enorme parcela da população, seja por dispositivos móveis que são maioria atualmente ou por qualquer 
-                    outro meio. 
-                    Segundo o Censo de 2010, no Brasil, existem mais de 45 milhões de pessoas com algum tipo de deficiência,
-                    considerando que no mesmo ano da pesquisa, haviam 195,7 milhões de individuos, a quantia de PCD's era de 1/4
-                    de toda a população, é um número consideravél, mas, ainda sim essa questão não é algo divulgado com a intensidade
-                    necessária para trazer maior satisfação e redução da desigualdade com relação a essas pessoas no País.
-                    Deveria ser diferente considerando essa parcela da população que vive com algum tipo de deficiência, principalmente
-                    na internet, no ambiente digital como um todo, o que corrobora para essa afirmação são dois fatores, são 60 milhões
-                    de pessoas com necessidades específicas para acessar a web atualmente, e que segundo a OMS, apenas 10% das pessoas
-                    com deficiência tem acesso a tecnologia da qual necessitam, sendo assim, fica facil perceber um déficit nesta area. 
+                <p style="margin-right: 10px;" tabindex="5">Este site foi feito por três alunos de Análise e Desenvolvimento de sistemas, sendo um deles um deficiente visual e
+                desenvolvedor, CID H35.5 - Doenças Hereditárias da Retina. A grande importância dessas práticas diz respeito à igualdade
+                no ambiente virtual, que atualmente é acessado por uma enorme parcela da população. Seja por dispositivos móveis que são
+                maioria atualmente ou por qualquer outro meio. Segundo o Censo de 2010, no Brasil, existem mais de 45 milhões de pessoas
+                com algum tipo de deficiência. Considerando que no mesmo ano da pesquisa havia 195,7 milhões de indivíduos no Brasil, a
+                quantia de PCD's era de 1/4 de toda a população.
+                <br><br>
+                É um número considerável, mas ainda sim essa questão não é divulgada com a intensidade necessária para trazer maior
+                satisfação e redução da desigualdade com relação a essas pessoas no país. Deveria ser diferente considerando como essa
+                parcela da população é volumosa. Desta forma esperamos contribuir para melhorar o acesso dos desenvolvedores às
+                informações de desenvolvimento com acessibilidade. 
                 </p>
             </div>
         </section>
@@ -94,25 +90,19 @@
                     
                     <h2 tabindex="4">O papel dos Desenvolvedores na Acessibilidade</h2>
                 </div>
-                <p style="margin-right: 10px;" tabindex="5">O grande papel de quem desenvolve na acessibilidade, é o de implementar opções para suprir as necessidades daqueles que
-                    tem alguma dificuldade,
-                    pois nós que criamos sites e aplicações, somos os arquitetos do mundo digital, sendo assim, se fizessemos uma casa para
-                    alguma pessoa com
-                    deficiênciência nós fariamos a casa com toda acessibilidade necessária para ela. Na internet isso não é diferente,
-                    apesar do seu contratante
-                    não te pedir para fazer um site acessivel, acreditamos que é o seu dever, nosso dever, lembrar que no mundo existem
-                    pessoas diferentes de nós
-                    cada um com sua peculiaridade. Assim como nós queremos igualdade para nós mesmos, nossos entes queridos e amigos, temos
-                    que pensar de forma
-                    mais ampla, levando isso a todos e não só a quem nos convém. Dessa forma, mesmo que não consigamos suprir todas as
-                    necessidades e acabar de vez
-                    com a dificuldade de acesso para todos, estamos fazendo nossa parte em um grande mundo digital onde cada pequena ação
-                    conta e muitas vezes,
-                    pode acender uma pequena chama em outra pessoa para que ela pense e mude sua forma de fazer suas aplicações e websites.
-                    A falta de acessibilidade não é apenas na internet, mas também na rua, porém, o lugar onde podemos fazer a diferença é
-                    aqui, trazendo conforto
-                    e uma sensação de que a pessoa também faz parte da nossa comunidade web, essa é a importância de nós que construimos
-                    parte desse meio.
+                <p style="margin-right: 10px;" tabindex="5">O grande papel de quem desenvolve na acessibilidade, é o de programar opções para suprir as necessidades daqueles que
+                tem alguma dificuldade. Nós que criamos sites e aplicações, somos os arquitetos do mundo digital. Sendo assim, se
+                fizéssemos uma casa para alguma pessoa com deficiência, nós faríamos a casa com toda acessibilidade necessária para ela.
+                Na internet isso não é diferente. Apesar do seu contratante não te pedir para fazer um site acessível, acreditamos que é
+                nosso dever lembrar que no mundo existem pessoas diferentes de nós, cada um com suas necessidades.
+                <br><br>
+                Assim como nós queremos igualdade, temos que pensar de forma mais ampla, levando isso a todos e não só a quem nos convém.
+                Dessa forma, mesmo que não consigamos suprir todas as necessidades e acabar de vez com a dificuldade de acesso para
+                todos, estamos fazendo nossa parte no mundo digital onde, cada pequena ação conta e muitas vezes, pode acender uma
+                pequena chama em outra pessoa para que ela pense e mude sua forma de fazer suas aplicações e websites. A falta de
+                acessibilidade não é apenas na internet, porém um lugar onde podemos fazer a diferença é aqui, trazendo conforto e uma
+                sensação de que a pessoa também faz parte da comunidade web. Essa é a importância e responsabilidade atrelada a nós, que
+                construímos este meio.
                 </p>
             </div>
             </section>

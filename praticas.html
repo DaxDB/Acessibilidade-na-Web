@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
 
-<head>
-    <title>Sample Project</title>
+    <head>
+        <title>Sample Project</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./assets/css/styles.css" />
     <link rel="stylesheet" href="./assets/css/list.css" />
@@ -27,61 +27,103 @@
     <a class="skip-to-content" href="#content" tabindex="2">
         Pular para o conteúdo
     </a>
-    <header class="header1">
-<nav>
-<div class="logo-title" style="display: flex;
-    align-items: center; color: #FFF; margin-left: 90px;">
-            <img class="img-logo" src="./assets/img/accessibility.png" style="width: 40px; height: 36.84px; border-radius: 50%;">
-    <div class="menu-title" style="font-size: 20px; font-style: normal; padding-left: 18px;">
-        <h4>
-            Tecnologia Assistiva - UNINTER
-        </h4>
-    </div>
-</div>
-
-    <ul
-        style="display: flex; list-style: none; justify-content: center; align-items: center; height: 40px; padding: 0 17px;">
-        <li class="start-page"><a href="./index.html" id="index" tabindex="3" style="color: #ffffff; margin: 0 7px;
-    justify-content: center; text-decoration: none; font-size: 16px;">Página Inicial</a></li>
-        <li class="bar" style="margin: 0 7px;
-    justify-content: center; color: #ffffff;">│</li>
-        <li class="content-page"><a href="./praticas.html" id="praticas" tabindex="3" style="color: #ffffff; margin: 0 7px;
-    justify-content: center; text-decoration: none; font-size: 16px;">As Práticas</a></li>
-    </ul>
-
-    <div class="acessibility" style="margin-right: 245px;">
-        <ul style="text-align: center;">
-            <li style="list-style: none;"><a href="#altocontraste" id="altocontraste" accesskey="1"
-                    onclick="window.toggleContrast()" onkeydown="window.toggleContrast()" tabindex="3"
-                    style="color: #ffffff;"><img src="./assets/img/hc.png" alt="alto-contraste"
-                        style="width: 40px; height: 40px; border-radius: 50%;"></a></li>
-            <li style="list-style: none; color: #FFF; font-size:14px;">[ALT + 1]</li>
+    <nav>
+        <div class="logo-title">
+            <img class="img-logo" src="./assets/img/accessibility.png" style="width: 40px; height: 36.84px">
+            <div class="menu-title" style="font-size: 20px; font-style: normal;">
+                <h4>
+                    Tecnologia Assistiva - UNINTER
+                </h4>
+            </div>
+        </div>
+        
+        <ul>
+            <li class="start-page"><a href="./index.html" id="index" tabindex="3" ">Página Inicial</a></li>
+            <li class=" bar">│</li>
+            <li class="content-page"><a href="./praticas.html" id="praticas" tabindex="3">As Práticas</a></li>
         </ul>
-    </div>
-</nav>
-    </header>
-    <main>
+        
+        <div class="acessibility">
+            
+            <div class="high">
+                <a href="#altocontraste" id="altocontraste" accesskey="1" onclick="window.toggleContrast()"
+                onkeydown="window.toggleContrast()" tabindex="3"><img src="./assets/img/hc.png" alt="alto-contraste"
+                style="width: 40px; height: 40px; border-radius: 50%;"></a>
+                [ALT + 1]
+            </div>
+            
+        </div>
+    </nav>
+</header>
+<main>
+        <section>
+            <div class="align">
+            <div class="h2-main">
+                <h2>Aumentar e Diminuir o Texto</h2>
+            </div>
+                <p>
+                    A opção de aumentar ou diminuir o texto é mais uma forma de acessibilidade para pessoas com deficiência visual.
+                    Ela auxilia na leitura de textos e a pessoa pode utiliza-lar de acordo com seu grau de déficit. É util até para quem
+                    tem telas muito grandes e ao invés de, aumentar o site por completo, ela pode ampliar apenas a seção do conteúdo que deseja ver.
+                </p>
+                <p>No exemplo abaixo, o código implementado ampliará o tamanho dos textos contidos no elemento 'section',
+                    você pode ver o código completo abaixo. Aqui está o <a href="https://www.eversondaluz.com.br/aumentar-e-diminuir-fonte">link para o site do desenvolvedor Everson da Luz com a explicação completa do código.</a>
+                </p>
+                <div class="btn-container h2-main" style="margin-bottom: 15px;">
+                    <button name="increase-font" id="increase-font" title="Aumentar fonte">A +</button>
+                    <button name="decrease-font" id="decrease-font" title="Diminuir fonte">A -</button>
+                </div>
+                <details>
+                    <summary>Mostrar/Esconder</summary>
+                    <pre>
+                        <code>
+                            window.onload = function() {
+                                var elementBody = document.querySelector('body');
+                                var elementBtnIncreaseFont = document.getElementById('increase-font');
+                                var elementBtnDecreaseFont = document.getElementById('decrease-font');
+                            // Padrão de tamanho, equivale a 100% do valor definido no Body
+                                var fontSize = 100;
+                            // Valor de incremento ou decremento, equivale a 10% do valor do Body
+                                var increaseDecrease = 10;
+                            
+                            // Evento de click para aumentar a fonte
+                            elementBtnIncreaseFont.addEventListener('click', function(event) {
+                                fontSize = fontSize + increaseDecrease;
+                                elementBody.style.fontSize = fontSize + '%';
+                            });
+                            
+                            // Evento de click para diminuir a fonte
+                            elementBtnDecreaseFont.addEventListener('click', function(event) {
+                                fontSize = fontSize - increaseDecrease;
+                                elementBody.style.fontSize = fontSize + '%';
+                            });
+                            }
+                        </code>
+                    </pre>
+                </details>
+            </div>
+        </section>
         <section id="content" class="semantic">
             <div class="align">
                 <div class="h2-main">
-                    <h2>HTML SEMÂNTICO, RÓTULOS E DADOS DE FORMA ACESSÍVEL</h2>
+                    <h2>HTML semântico, rótulos e dados de forma acessivel</h2>
                 </div>
                 <p>
-                    O HTML semântico nada mais é do que, escrever o seu código de uma forma que seja de facil entendimento
-                    para o computador, ou seja, escrever o HTML com tags que façam sentido, de acordo com o conteúdo.
-                    Isso é importante para acessibilidade pois, ajuda as ferramentas como o leitor de tela, compreender melhor
-                    as seções e tudo que está disposto em seu site.<br><br>
+                    O HTML semântico nada mais é do que escrever o seu código de uma forma que seja de fácil entendimento para o computador,
+                    ou seja, escrever o HTML com tags que façam sentido. Isso é importante para acessibilidade, pois auxilia as ferramentas
+                    como o leitor de tela à compreender melhor as seções e tudo que está disposto em seu site.<br><br>
                     <strong>"Semântica é o estudo do significado e interpretação de palavras. Aplicando isso ao HTML, significa a melhor compreensão
                     do HTML para o computador."</strong><br><br>
-                    Anteriormente do atual HTML5, usavamos apenas "divs" para separar o conteudo, sendo assim o computador
-                    não podia compreender o seu site pois não havia uma separação que fazia sentido para ele, dificultando a criação e
-                    usabilidade de leitores de tela.
+                    Antes do HTML5 usávamos apenas "divs" para separar o conteúdo. Sendo assim o computador não podia compreender o seu site,
+                    pois não havia uma separação que fazia sentido para ele, dificultando a criação e usabilidade de leitores de tela.
 
                     
                 </p>
-                <p class="extra-content"> Temos bons exemplos de tags html semãnticas, algumas delas são: header, aside, section, article, nav, main, footer, entre outras.
+                <p class="extra-content">Temos bons exemplos de tags html semânticas, algumas delas são: header, aside, section, article, nav, main, footer, entre
+                outras.
                     <br><br>
-                Aqui vai uma breve explicação das principais tags citada acima, também utilizando uma lista ordenada que ajuda ao leitor de tela compreender a ordem e o tipo de conteúdo.
+            Aqui vai uma breve explicação das principais tags citada acima, também utilizando uma lista ordenada que ajuda ao leitor
+            de tela compreender a ordem e o tipo de conteúdo.
                 <br><br>
                 <ol>
                     <li>Header: indica o cabeçalho da página.</li>
@@ -94,11 +136,11 @@
                 </p>
                 <h3 class="h2-main">Rótulos de Texto com significado</h3>
                 <p>
-                    Os rótulos de texto tornam mais fácil entender para onde e para que serve o item, tais como botões e links.
-                    Devem ser feitos de maneira que o leitor entenda onde vai parar se clicar naquele local, um exemplo de um rótulo ruim 
-                    são links com "clique aqui", isso pode parecer algo comum mas se deseja acessibilidade, precisa entender que, os ususarios
-                    de leitores podem usar atalhos para exibir ou ouvir listas de botões e controle de formulário, dificultando uma identificação
-                    adequada. Você deve se certificar de que os rótulos fazem sentido quando lidos individualmente e no contexto do paragráfo.
+                    O rótulo de textos tem como objetivo tornar mais fácil a navegação para o usuário que utilize leitor de tela. Através
+                    deles, os usuários podem entender para onde irão se clicarem em botões e/ou links. Eles devem ser feitos de maneira
+                    clara e intuitiva. Um exemplo de rótulo ruim são links com "clique aqui" escrito. Isso pode parecer algo comum, mas eles
+                    tendem a atrapalhar bastante a experiência do usuário que faz uso de leitor de tela. Você deve se certificar de que os
+                    rótulos fazem sentido quando lidos individualmente e no contexto do parágrafo.
                 </p>
                 <p>
                     Aqui está um bom exemplo de rótulo em um link: 
@@ -125,29 +167,26 @@
                     E aqui seria um exemplo ruim a ser usado em seu código:
                     <br><br>
                     Digite o seu e-mail aqui: &lt;input type="text" id="email" name="email"&gt;
-
+                    
                 </p>
-
+                
             </div>
         </section>
         <section id="content" class="dark-div">
             <div class="align">
                 <div class="h2-main">
 
-                    <h2 tabindex="4">MODO ESCURO</h2>
+                    <h2 tabindex="4">Modo Escuro</h2>
                 </div>
-                <p tabindex="5">Este é o Dark Mode ou modo escuro, uma tecnologia muito
-                    importante e muito utilizada atualmente.
-                    por exemplo, ela pode ajudar pessoas que tem algum tipo de problema visual, como fotofobia, e até mesmo
-                    pessoas que não tem problemas, mas que utilizam muito o computador para leitura, trabalho e afins, pois
-                    ela diminui o esforço que os olhos precisam fazer para poder ler a tela e, a longo prazo, evita que
-                    as pessoas desenvolvam alguma doença nos olhos.
-                    Ele pode ser feito de maneira relativamente simples com CSS/Javascript.
+                <p tabindex="5">Este é o Dark Mode ou modo escuro, uma tecnologia muito importante e muito utilizada atualmente. Por exemplo, ela pode
+                ajudar pessoas que tem algum tipo de problema visual, como fotofobia, e até mesmo pessoas que não tem problemas, mas que
+                utilizam muito o computador para leitura, trabalho e afins. Ela diminui o esforço que os olhos precisam fazer para poder
+                ler a tela e em longo prazo, evita que as pessoas desenvolvam algum problema visual. Ele pode ser feito de maneira
+                relativamente simples com CSS/Javascript.
                     Aqui está um <a href="https://www.youtube.com/watch?v=BvhYm0BOLvA&t" tabindex="6" target="_blank"
                     rel="noreferrer noopener">video explicando uma das
-                    maneiras de se fazer o Dark Mode.</a> Esta não é a unica forma de faze-lo, mas vale dar uma olhada, pois
-                    desenvolvedores de qualquer nivel, serão capazes de aplica-la em seus projetos, ajudando as pessoas
-                    com o modo escuro em seus sites ou aplicações web.</p>
+                    maneiras de se fazer o Dark Mode.</a> Esta não é a única forma de fazê-lo, mas vale dar uma olhada, pois desenvolvedores de qualquer nível serão capazes de
+                    aplica-la em seus projetos.</p>
                     
                     <div class="h2-main">
 
@@ -160,9 +199,9 @@
                         <p style="text-align: center;">Aqui está o código base utilizado, disponivel no video citado no texto acima.
                         Você pode fazer as modificações de acordo com a sua necessidade!
                     </p>
-                    <button class="hideButton" onclick="showHide()">Mostrar/Esconder</button>
-                    <div class="dark-code" id="darkcode">
-                        <pre>
+                    <details class="button">
+                    <summary>Mostrar/Esconder</summary>
+                    <pre style="background-color: black;">
                     <code>
                         const html = document.querySelector("html")
                         const checkbox = document.querySelector("input[name=theme]")
@@ -210,11 +249,12 @@
                     &lt;label class="label-tg" for="switch"&gt;Toggle&lt;/label&gt;
                     &lt;/div&gt;
                     
-                    OBS: A estilização em CSS fica a seu critério mas, 
-                    também pode ser encontrada <a href="https://gist.github.com/maykbrito/f3744039fcc20db62d6cfd502aa2bc86">clicando aqui.</a>
+                    OBS:<a href="https://gist.github.com/maykbrito/f3744039fcc20db62d6cfd502aa2bc86">A estilização em CSS fica a seu critério mas, 
+                    também pode ser encontrada clicando aqui.</a>
                 </code>
             </pre>
-        </div>
+       
+        </details>
         
     </div>
     </section>
@@ -223,24 +263,20 @@
             <div class="align">
                 <div class="h2-main">
 
-                    <h2 tabindex="9">ALTO CONTRASTE</h2>
+                    <h2 tabindex="9">Alto Contraste</h2>
                 </div>
-                <p tabindex="10"> A aplicação de alto contraste, é uma prática muito útil também, assim como o próprio dark
-                    mode,
-                    pois também facilita a leitura, dando mais foco no texto a ser lido em uma página, seu padrão, como
-                    pode ser visto, utilizando a tecla 'ALT + 3', nessa página, é transformar os fundos em preto e as
-                fontes em branco, assim causando um grande contraste entre essas duas cores básicas, tornando muito mais
-                legivel a quem tem alguma dificuldade para ler em telas de qualquer dispositivo, também tornando mais
-                facil para o olho humano focar nos textos e outras coisas exibidas na tela.
+                <p tabindex="10">A aplicação de alto contraste é uma prática muito útil também, assim como o próprio dark mode. Ele também facilita a
+                leitura, dando mais foco no texto a ser lido em uma página. Seu padrão, como pode ser visto, é utilizando a tecla 'ALT +
+                1'. Sua funcionalidade é modificar os fundos para preto e as fontes para branco, assim causando um grande contraste
+                entre essas duas cores básicas, tornando muito mais legível a quem tem alguma dificuldade para ler em telas de qualquer
+                dispositivo. Ele também auxilia tornando o olho humano à focar melhor nos textos e outras coisas exibidas na tela.
             </p>
             
-            <p style="text-align: center;">Esse é o código javascript do alto contraste, feito para fazer as teclas funcionarem,
-            no caso usamos o ALT + 1, ativando assim o alto contraste.(Lembre-se de adicionar ao seu html
-            uma descrição explicando qual o botão deve ser pressionado para ativa-lo e também, de fazer
-            a parte funcional direto no HTML.)</p>
-            <button type="button" class="hideButton" onclick="showHide2()">Mostrar/Esconder</button>
-            <div class="contrast-code" id="contrastcode">
-                <pre>
+            <p style="text-align: center;"Esse é o código javascript do alto contraste, desenvolvido para ativar o atalho escolhido – neste caso o ALT +1 – e consequentemente a funcionalidade. 
+(Lembre-se de adicionar ao seu HTML uma descrição explicando qual  botão deve ser pressionado para ativa-lo e também, de fazer a parte funcional direto no HTML.)</p>
+                <details>
+                    <summary>Mostrar/Esconder</summary>
+                <pre style="background-color: black;">
                     <code>
                         
                         function () {
@@ -370,32 +406,29 @@
     
                     </code>
                 </pre>
-            </div>
+                </details>
         </div>
         </section>
         <section>
             <div class="align">
                 <div class="h2-main">
 
-                    <h2 tabindex="11">NAVEGAÇÃO SEM MOUSE OU VIA TECLADO</h2>
+                    <h2 tabindex="11">Navegação sem Mouse ou via Teclado</h2>
                 </div>
                 <p tabindex="12">
-                    A navegação sem utilizar o mouse, é uma boa prática de acessibilidade, pois auxilia as pessoas que tem
-                    algum tipo de impedimento ou baixa mobilidade, assim, a pessoa pode utilizar apenas um
-                    dispositivo/preriférico
-                    para navegar pelo seu website. Utilizamos alguns exemplos nesta página, como no inicio da página, um
-                    link para
-                    pular para o conteúdo principal, em seguida, um link para acessar o botão de dark mode, e as teclas
-                    ALT + 3 para ativar o alto contraste, como mostrado no tópico anterior, também pode ser feita a
-                    navegação
-                    entre os tópicos da página com a tecla TAB, assim facilitando para quem utiliza leitores de tela.
-                    No nosso caso, utilizamos o <code>tabindex</code> no HTML, pois de forma fácil ele ajuda a organizar
-                    a ordem em que a tecla TAB navega pela página, e já aplica automáticamente a borda em volta do conteudo.
-                    Existem outras maneiras de se fazer a navegação via teclado, quando necessário para sites mais complexos
-                    e com mais elementos na página. Você pode acessar um post sobre o tabindex, do desenvolvedor Everson da
+                    A navegação sem utilizar o mouse é uma boa prática de acessibilidade, pois auxilia as pessoas que tem algum tipo de
+                    impedimento ou baixa mobilidade. Desta forma a pessoa pode utilizar apenas um dispositivo/periférico para navegar pelo
+                    seu website.
+                    Utilizamos alguns exemplos nesta página: no inicio da página um link para pular para o conteúdo principal, um link para
+                    acessar o botão de dark mode e as teclas ALT + 1 para ativar o alto contraste, como mostrado no tópico anterior.
+                    Também pode ser feita a navegação entre os tópicos da página com a tecla TAB, assim facilitando para quem utiliza
+                    leitores de tela. No nosso caso, utilizamos o<code>tabindex</code> no HTML, porque ele conta com algumas facilidades, como ajudar a
+                    organizar a ordem em que a tecla TAB navega pela página e já aplicar a borda em volta do conteúdo. Existem outras
+                    maneiras de se fazer a navegação via teclado quando necessário, para sites mais complexos e com mais elementos na
+                    página.<a href="https://www.eversondaluz.com.br/focus-em-elementos-tabindex" tabindex="13" target="_blank"
+                        rel="noreferrer noopener"> Você pode acessar um post sobre o tabindex, do desenvolvedor Everson da
                     Luz,
-                    clicando <a href="https://www.eversondaluz.com.br/focus-em-elementos-tabindex" tabindex="13"
-                    target="_blank" rel="noreferrer noopener">aqui</a>.
+                    clicando aqui</a>.
                     
                 </p>
             </div>
@@ -404,28 +437,28 @@
                 <div class="align">
                     <div class="h2-main">
 
-                        <h2 tabindex="14">BOAS PRATICAS NA DESCRIÇÃO DE CONTEÚDOS</h2>
+                        <h2 tabindex="14">Boas práticas na descrição de Conteúdos</h2>
                     </div>
                     <p tabindex="15">
-                        O conteútdo em texto de um site, é inerentemente acessível porém, não devemos esquecer
-                        da acessibilidade em conteúdos multimídia como videos e imagens. Obviamente alguns não conseguem
-                        ver o conteúdo e outros não conseguem ouvir. Sendo assim, devemos aplicar regras a esse tipo de conteúdo
-                        para auxiliar na compreensão de quem necessita.
+                        O conteúdo em texto de um site é inerentemente acessível, porém não devemos esquecer-nos da acessibilidade em conteúdos
+                        multimídia como vídeos e imagens. Algumas pessoas não conseguem ver o conteúdo e outros não conseguem ouvir. Sendo
+                        assim, devemos aplicar regras a esse tipo de conteúdo para auxiliar na compreensão de quem necessita.
                     </p>
                     <p>
                         Tratando-se de imagens, se você utilizar apenas o nome do arquivo em sua composição como:
                         <br><br>
                         &lt;img src="pokemon.png"&gt;
                         <br><br>
-                        Ela não indicará nada além de nome do arquivo ao leitor de tela, isso torna dificil a compreensão
-                        pois apenas indica que é um pokemon no exemplo mas, não diz qual pokemon seria e suas caracteristícas.
+                    Ela não indicará nada além de nome do arquivo ao leitor de tela. Isso dificulta a compreensão, pois apenas indica que é,
+                    por exemplo, um Pokémon. Mas não diz qual exato Pokémon ele é ou quais seriam suas características visíveis.
                         <br><br>
                         &lt;img src="pokemon.png"
                             alt="Um pokemon chamado Mewtwo, um lendário pokemon, com aparência de felino bípede branco, alto e esguio, possui
                             uma cauda e estômago roxos com uma espécie de segundo ducto cutâneo ligando a nuca para suas costas, dobrando o pescoço.
                             Sua aparência é ligada a mistura de um gato, um esquilo e um canguru. Ele tem as cores cinza e roxo." title="Pokemon Lendário MewTwo" &gt;
                             <br><br>
-                            Já no exemplo acima, a descrição completa da imagem será exibita pelo texto alt e uma mais breve pelo atributo title.    
+                            Já no exemplo acima, a descrição completa da imagem será exibita pelo texto ALT e uma mais breve pelo atributo title.
+                            Veja na prática a imagem com os atributos.
                         
                         </p>
                         <p style="text-align: center;">
@@ -454,12 +487,13 @@
                 </div>
                 <div class="align">
                     <p>
-                        O site do governo disponibiliza de forma simples e gratuita um código para um leitor em Libras para seu site.
-                        É algo muito simples de se aplicar, não atrapalha a disposição de seu site e tudo que é necessário é colocar algumas linhas
-                        de código no final do seu body, após isso, o leitor ficara ao lado direito de seu site, bastando clicar, assim que ele
-                        for executado o usuário poderá clicar nos textos e até mesmo passar o mouse para ver titulos de imagens com esse leitor.
+                        O site do governo disponibiliza de forma simples e gratuita um código para um leitor em Libras para seu site. É algo
+                        muito simples de se aplicar, não atrapalha a disposição de seu site e tudo que é necessário é colocar algumas linhas de
+                        código no final do seu body. Após isso, o leitor ficara ao lado direito de seu site, bastando clicar. Assim que ele for
+                        executado o usuário poderá clicar nos textos e até mesmo passar o mouse para ver títulos de imagens em libras com esse
+                        leitor. Aqui está o link para o site com o código a ser aplicado.
 
-                        Aqui está o <a href="#">link para o site com o código a ser aplicado.</a>
+                        Aqui está o <a href="https://vlibras.gov.br/doc/widget/introduction/overview.html">link para o site com o código a ser aplicado.</a>
                     </p>
                     <p>
                         
@@ -479,6 +513,8 @@
             <div class="vw-plugin-top-wrapper"></div>
         </div>
     </div>
+
+    <script src="./assets/js/increase.js"></script>
     <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
     <script>
         new window.VLibras.Widget('https://vlibras.gov.br/app');
