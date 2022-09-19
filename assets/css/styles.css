@@ -288,6 +288,13 @@ p {
 
 .contrast pre {
   border: 1px solid white;
+  width: 100%;
+}
+code {
+  background-color: black;
+  padding: 5px;
+ 
+  font-size: 16px
 }
 
 ul {
@@ -351,10 +358,44 @@ ul a {
   width: 100px;
   margin: auto;
   justify-content: space-evenly;
+}
+
+details {
   
 }
 
+summary {
+  margin-bottom: 10px;
+  width: 200px;
+  cursor:pointer;
+  border-radius: 7px;
+  text-align: center;
+}
+summary:hover {
+  color: black;
+  background-color: gray;
+  border: none;
+}
+.contrast summary {
+  color: white;
+}
+.contrast summary:hover {
+  color: black;
+  background-color: white;
+}
 
+#increase-font,
+#decrease-font {
+  cursor: pointer;
+}
 
-
-
+.links-u {
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+  margin: auto;
+  width: 70%;
+  font-size: 20px;
+  line-height: 30px;
+  
+}

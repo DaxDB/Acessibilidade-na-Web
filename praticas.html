@@ -70,8 +70,8 @@
                     você pode ver o código completo abaixo. Aqui está o <a href="https://www.eversondaluz.com.br/aumentar-e-diminuir-fonte">link para o site do desenvolvedor Everson da Luz com a explicação completa do código.</a>
                 </p>
                 <div class="btn-container h2-main" style="margin-bottom: 15px;">
-                    <button name="increase-font" id="increase-font" title="Aumentar fonte">A +</button>
-                    <button name="decrease-font" id="decrease-font" title="Diminuir fonte">A -</button>
+                    <button class="aa" name="increase-font" id="increase-font" title="Aumentar fonte">A +</button>
+                    <button class="aa" name="decrease-font" id="decrease-font" title="Diminuir fonte">A -</button>
                 </div>
                 <details>
                     <summary>Mostrar/Esconder</summary>
@@ -114,7 +114,7 @@
                     como o leitor de tela à compreender melhor as seções e tudo que está disposto em seu site.<br><br>
                     <strong>"Semântica é o estudo do significado e interpretação de palavras. Aplicando isso ao HTML, significa a melhor compreensão
                     do HTML para o computador."</strong><br><br>
-                    Antes do HTML5 usávamos apenas "divs" para separar o conteúdo. Sendo assim o computador não podia compreender o seu site,
+                    ASntes do HTML5 usávamos apenas "divs" para separar o conteúdo. Sendo assim o computador não podia compreender o seu site,
                     pois não havia uma separação que fazia sentido para ele, dificultando a criação e usabilidade de leitores de tela.
 
                     
@@ -447,15 +447,21 @@
                     <p>
                         Tratando-se de imagens, se você utilizar apenas o nome do arquivo em sua composição como:
                         <br><br>
+                       
+                            <code>
                         &lt;img src="pokemon.png"&gt;
+                            </code>
+                   
                         <br><br>
                     Ela não indicará nada além de nome do arquivo ao leitor de tela. Isso dificulta a compreensão, pois apenas indica que é,
                     por exemplo, um Pokémon. Mas não diz qual exato Pokémon ele é ou quais seriam suas características visíveis.
                         <br><br>
-                        &lt;img src="pokemon.png"
+                       
+                           <code>&lt;img src="pokemon.png"
                             alt="Um pokemon chamado Mewtwo, um lendário pokemon, com aparência de felino bípede branco, alto e esguio, possui
                             uma cauda e estômago roxos com uma espécie de segundo ducto cutâneo ligando a nuca para suas costas, dobrando o pescoço.
                             Sua aparência é ligada a mistura de um gato, um esquilo e um canguru. Ele tem as cores cinza e roxo." title="Pokemon Lendário MewTwo" &gt;
+                        </code>
                             <br><br>
                             Já no exemplo acima, a descrição completa da imagem será exibita pelo texto ALT e uma mais breve pelo atributo title.
                             Veja na prática a imagem com os atributos.
